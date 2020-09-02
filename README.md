@@ -1,2 +1,3 @@
 # Processing_basics
-Only basic processing sketchs more verbose than the oiginals exemples (I hope ;) ).
+
+Only basics processing sketches more verbose and / or explicit than the originals exemples (I hope ;) )
