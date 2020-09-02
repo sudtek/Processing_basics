@@ -18,9 +18,10 @@ void settings() {
 }
 
 void setup() {
-  //size(); //NO gonna gererated an IllegalStateException: size(
+  //size(); //NO
   
   /*
+  * Gonna gererated an IllegalStateException: size()
   * cannot be used here, see https://processing.org/reference/size_.html since processing version 3.5.2
   * When not using the PDE, size() can only be used inside settings().
   * Remove the size() method from setup(), and add the following:
@@ -52,8 +53,7 @@ void setup() {
 }
 
 void captureEvent(Capture cam){
-  cam.read();
-  //Event here is a frame ready in the buffer and loop
+  cam.read();  //Event here is a triger who wait frame ready buffer full send the image and loop
 } 
 
 //void mousePressed(){
@@ -64,7 +64,7 @@ void captureEvent(Capture cam){
 
 
 void draw() {
-    background(0);
+    background(0); //comstic black background
     
   if (cam.available() == true) { cam.read();}
   
@@ -72,7 +72,7 @@ void draw() {
   // The following does the same as the above image() line, but 
   // is faster when just drawing the image without any additional 
   // resizing, transformations, or tint.
-  set(0, 0, cam); //natif plus rapide
+  set(0, 0, cam); //natif more fast / no lag
 }
 
 /*
